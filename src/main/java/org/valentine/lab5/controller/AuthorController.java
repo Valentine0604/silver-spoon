@@ -16,12 +16,12 @@ public class AuthorController {
     private final AuthorService authorService;
 
     @PostMapping
-    public void addAuthor(Author author) {
+    public void addAuthor(@RequestBody Author author) {
         authorService.addAuthor(author);
     }
 
     @PutMapping
-    public void updateAuthor(Author author) {
+    public void updateAuthor(@RequestBody Author author) {
         authorService.updateAuthor(author);
     }
 

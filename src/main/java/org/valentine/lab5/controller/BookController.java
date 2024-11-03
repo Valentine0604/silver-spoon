@@ -15,12 +15,12 @@ public class BookController {
     private final BookService bookService;
 
     @PostMapping
-    public void addBook(Book book) {
+    public void addBook(@RequestBody  Book book) {
         bookService.addBook(book);
     }
 
     @PutMapping
-    public void updateBook(Book book) {
+    public void updateBook(@RequestBody Book book) {
         bookService.updateBook(book);
     }
 
